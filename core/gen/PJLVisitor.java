@@ -34,6 +34,30 @@ public interface PJLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFunc_assignment(PJLParser.Func_assignmentContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link PJLParser#if_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_stmt(PJLParser.If_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PJLParser#while_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile_stmt(PJLParser.While_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PJLParser#for_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_stmt(PJLParser.For_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PJLParser#conditional_block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitConditional_block(PJLParser.Conditional_blockContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link PJLParser#call}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

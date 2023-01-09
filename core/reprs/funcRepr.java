@@ -20,7 +20,7 @@ public class funcRepr {
         this.javaCallable = javaCallable;
     }
 
-    public Object Call(List<Object> args) {
+    public Object Call(List<?> args) {
         if (this.block != null) {
             return this.block;
         } else {

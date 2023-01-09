@@ -1,5 +1,4 @@
 import core.Error;
-import core.ErrorListener;
 import core.Visitor;
 import core.gen.PJLLexer;
 import core.gen.PJLParser;
@@ -24,14 +23,13 @@ public class Main {
         var tree = parser.parse();
 
         var visitor = new Visitor<>();
-        visitor.SetReprs();
-        visitor.SetFuncs();
+        visitor.Init();
         visitor.visit(tree);
 
         var end_time = Instant.now();
         var elapsed = end_time.toEpochMilli() - start_time.toEpochMilli();
         System.out.println("Total time to execute -> " + elapsed + "ms");
-        
+
         System.out.println("\nProcess finished with exit code 0");
     }
 }
